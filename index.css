@@ -1,11 +1,6 @@
-body{
-    padding: 0;
-}
-
 .screen{
     width: 100%;
     height: 100vh;
-    border: solid black;
     font-family: 'Nunito', sans-serif;
 }
 
@@ -13,8 +8,10 @@ body{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 4rem;
-    margin-bottom: 10rem;
+    margin-bottom: 5rem;
+     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .nav-links{
@@ -30,10 +27,11 @@ body{
     list-style: none; /*removes default li style*/
 }
 
-a {
+a{
     text-decoration: none;  /* removes underline */
     color: inherit;         /* inherits color from parent element */
-    font: 700;
+    font-size: 15px;
+    font-weight: 600;
 }
 
 .logo{
@@ -42,12 +40,40 @@ a {
     padding-bottom: 6px;
 }
 
+.logo img{
+    width: 5rem;
+    height: 4rem;
+}
+
 .logo-text{
     padding-right: auto;
     padding-left: auto;
-    font: 700;
+    padding-top: auto;
+    padding-bottom: auto;
+    font-size: 20px;
+    font-weight: 700;
 }
 
 .large-box{
     width: 80%;
+    height: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid red;
+    border-radius: 5rem;
+}
+
+.box{
+    width: 50%;
+    height: 100%;
+    
+}
+
+.bg-1{
+    background-image: url('img/Hat-Lady.jpg');
+    background-size: cover;       /* Optional: covers the entire area */
+    background-position: center;  /* Optional: centers the image */
+    background-repeat: no-repeat; /* Optional: prevents tiling */
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
 }
