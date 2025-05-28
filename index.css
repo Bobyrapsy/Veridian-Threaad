@@ -1,3 +1,7 @@
+body{
+    background-color: #000;
+}
+
 .screen{
     width: 100%;
     height: 100vh;
@@ -9,9 +13,8 @@
     justify-content: space-between;
     width: 100%;
     margin-bottom: 5rem;
-     --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-    --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    box-shadow: 0px 5px 50px 0px rgba(255, 255, 255, 0.237);
+    color: #ffffff;
 }
 
 .nav-links{
@@ -28,8 +31,8 @@
 }
 
 a{
-    text-decoration: none;  /* removes underline */
-    color: inherit;         /* inherits color from parent element */
+    text-decoration: none;
+    color: inherit;         
     font-size: 15px;
     font-weight: 600;
 }
@@ -55,25 +58,179 @@ a{
 }
 
 .large-box{
+    display: flex;
     width: 80%;
     height: 70%;
+    overflow: hidden;
     margin-left: auto;
     margin-right: auto;
-    border: solid red;
     border-radius: 5rem;
+    display: flex;
+    transition: all 0.5s ease-in-out;
+    overflow: hidden; 
+    position: relative;
+    perspective: 1000px;
+    box-shadow: -5px 13px 15px 0px rgba(255, 255, 255, 0.237);
 }
 
 .box{
     width: 50%;
     height: 100%;
-    
+    flex: 0 0 50% /* Prevent boxes from resizing */
+    position: relative; /* For proper stacking */
+    transition: transform 0.5s ease-in-out; /* Smooth sliding */
+    will-change: transform; /* Optimize animations */
+    backface-visibility: hidden;
 }
 
 .bg-1{
     background-image: url('img/Hat-Lady.jpg');
-    background-size: cover;       /* Optional: covers the entire area */
-    background-position: center;  /* Optional: centers the image */
-    background-repeat: no-repeat; /* Optional: prevents tiling */
-    border-top-left-radius: 5rem;
-    border-bottom-left-radius: 5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-1 a {
+    color: #ffffff;
+    font-size: 3rem;
+    font-weight: 700;
+    font-family: 'Lucida Sans', sans-serif;
+    padding: 1rem 3rem;
+    border: 2px solid blue;
+    background-color: rgba(0, 0, 255, 0.2); 
+    border-radius: 10px;
+    transition: all 0.3s ease; 
+}
+
+/* Hover effect */
+.bg-1 a:hover {
+    background-color: rgba(255, 0, 0, 0.358);
+    border-color: red;
+}
+
+
+
+/* Silver Gradient Background */
+.text-box {
+    background: linear-gradient(
+        135deg,
+        rgba(192, 192, 192, 0.9) 0%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(192, 192, 192, 0.9) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Text Styling */
+.text-box h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.text-box p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.highlight {
+    color: #000;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+/* Input & Button */
+.text-box input {
+    width: 80%;
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+    font-family: 'Nunito', sans-serif;
+}
+
+.text-box button {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    font-weight: 600;
+    box-shadow: -5px 13px 15px 0px rgba(0, 0, 0, 0.237);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.text-box button:hover {
+    background: #3700ff;
+}
+
+/* Optional: Countdown Styling */
+.countdown {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.countdown div {
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+
+/* Form Swap Styling */
+.signup-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+.signup-form input,
+.signup-form button {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 50px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.signup-form input {
+    border: 1px solid #ddd;
+}
+
+.signup-form button {
+    background: #3700ff;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.signup-form button:hover {
+    background: #ff0000;
+}
+
+.form-container {
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
 }
